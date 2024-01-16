@@ -12,18 +12,16 @@ class CoinToss extends Component {
 
   getResults = () => {
     const {Heads, Tails, Total, coinnumber} = this.state
-    if (coinnumber === 0) {
+   if (coinnumber === 0) {
       this.setState(
-        prevState => (
-          {Heads: prevState.Heads + 1}, {Total: prevState.Total + 1}
-        ),
-      )
+        prevState => ({
+          Heads: prevState.Heads + 1 ,
+           Total: prevState.Total + 1,
+           }))
     } else {
       this.setState(
         prevState => (
-          {Tails: prevState.Heads + 1}, {Total: prevState.Total + 1}
-        ),
-      )
+        {Tails: prevState.Heads + 1 , Total: prevState.Total + 1 ,}))
     }
   }
   render() {
